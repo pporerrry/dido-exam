@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ระบบข้อสอบสอบเข้า ม.4 — โรงเรียนดีโด้วิทยาลัย</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" id="siteLogo" aria-label="สัญลักษณ์สุนัขพันธุ์ German Shepherd"></div>
+        <div class="titles">
+          <h1>โรงเรียนดีโด้วิทยาลัย</h1>
+          <p class="sub">การสอบคัดเลือกเข้าศึกษาต่อระดับชั้นมัธยมศึกษาปีที่ 4</p>
+        </div>
+      </div>
+      <div class="header-badge">🐕 German Shepherd · Dido Wittayalai School</div>
+    </div>
+  </header>
+
+  <!-- ================= TIMER BAR (ระหว่างสอบ) ================= -->
+  <div class="timer-bar hidden" id="timerBar">
+    <div class="wrap">
+      <div>เวลาที่เหลือ</div>
+      <div class="timer" id="timerText">--:--:--</div>
+      <div class="muted" style="color:#e0d7d2" id="answeredCount"></div>
+      <div style="margin-left:auto" class="flex-between">
+        <button class="btn small gold" id="btnReviewTop">ตรวจทาน / ส่ง</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN ================= -->
+  <main class="page" id="app"></main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="shepherd">🐕🦺</div>
+    <div>ระบบข้อสอบออนไลน์สอบเข้า ม.4 · <span id="footerSchool">โรงเรียนดีโด้วิทยาลัย</span></div>
+    <div class="muted">สัญลักษณ์ประจำระบบ: สุนัขพันธุ์ German Shepherd</div>
+  </footer>
+
+  <!-- ================= MODAL (รหัสผ่าน) ================= -->
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <!-- ================= DATA & APP ================= -->
+  <script src="data.js"></script>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

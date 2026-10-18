@@ -1,0 +1,16 @@
+{
+  "name": "dido-exam",
+  "version": "1.0.0",
+  "description": "ระบบข้อสอบออนไลน์สอบเข้า ม.4 โรงเรียนดีโด้วิทยาลัย",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "UNLICENSED"
+}

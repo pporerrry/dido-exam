@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ระบบเจ้าหน้าที่ — สอบเข้า ม.4 โรงเรียนดีโด้วิทยาลัย</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .staff-header { background: linear-gradient(135deg, #1b1b1b, #3e2723); }
+    .staff-header .brand .titles h1 { font-size: 1.35rem; }
+    .badge-live { background: #1e7d32; color: #fff; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+    .filter-bar select, .filter-bar input { padding: 8px 12px; border: 1.5px solid #d7ccc8; border-radius: 8px; font-size: .95rem; font-family: inherit; }
+    .row-click { cursor: pointer; }
+    .row-click:hover td { background: #f6efe9; }
+    .tab-btn { padding: 8px 16px; border: 1.5px solid #a1887f; border-radius: 999px; background: #fff; cursor: pointer; font-weight: 600; color: #5d4037; font-size: .9rem; }
+    .tab-btn.active { background: #5d4037; color: #fff; }
+    .kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+    .kpi .stat-box { background: #fff; border: 1px solid #d7ccc8; }
+  </style>
+</head>
+<body>
+  <header class="site-header staff-header">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" id="staffLogo"></div>
+        <div class="titles">
+          <h1>ระบบเจ้าหน้าที่ — โรงเรียนดีโด้วิทยาลัย</h1>
+          <p class="sub">ศูนย์กลางรายชื่อ คะแนน และสถิติผู้เข้าสอบ ม.4 (ทุกห้องเรียน)</p>
+        </div>
+      </div>
+      <div class="header-badge badge-live" id="connStatus">● กำลังเชื่อมต่อ...</div>
+    </div>
+  </header>
+
+  <main class="page" id="staffApp"></main>
+
+  <footer class="site-footer">
+    <div>ระบบเจ้าหน้าที่ · เชื่อมข้อมูลกับเว็บทำข้อสอบออนไลน์ (ฐานข้อมูลกลาง)</div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="staff.js"></script>
+</body>
+</html>

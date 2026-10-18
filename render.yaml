@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dido-wittayalai-test
+    runtime: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: STAFF_PASSWORD
+        value: "456461"
+      - key: NODE_VERSION
+        value: "18"
+
+databases:
+  - name: dido-exam-db
+    plan: free
